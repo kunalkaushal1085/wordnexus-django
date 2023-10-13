@@ -5,7 +5,7 @@ import mask2 from "../../assets/images/mask-2.png";
 import mask3 from "../../assets/images/mask-3.png";
 import mask4 from "../../assets/images/mask-4.png";
 import mask5 from "../../assets/images/mask-5.png";
-// sdhaj
+
 export const Article = () => {
   return (
     <>
