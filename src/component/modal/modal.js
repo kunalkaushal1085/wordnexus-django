@@ -39,13 +39,12 @@ export const UploadModal = ({ isOpen, onClose, children }) => {
       if (!(res?.status === 200 || res?.status === 201)) {
         return res.data.message;
       } else {
-        console.log(res, "response?.data");
-
         if (res?.data?.status === 200) {
           setToken(res?.data?.token);
           setUserId(res?.data?.user_id);
           handleClose();
-          setUserDetail("");
+          setLoginUserDetail("");
+          navigate("/");
           toast.success(res?.data?.message);
           return res.data.response;
         } else {
@@ -93,7 +92,8 @@ export const UploadModal = ({ isOpen, onClose, children }) => {
       toast.warning("All fields are required.");
     } else {
       dispatch(registerUser({ userDetails, navigate }));
-      setUserDetail("");
+      setUserDetail();
+      setChangeForm(false);
     }
   };
 
@@ -221,7 +221,7 @@ export const UploadModal = ({ isOpen, onClose, children }) => {
                   </div>
                 </form>
 
-                <p className="mt-10 text-center text-sm text-gray-500">
+                <div className="mt-10 text-center text-sm text-gray-500">
                   You don't have an account?{" "}
                   <p
                     onClick={() => setChangeForm(!changeForm)}
@@ -229,7 +229,7 @@ export const UploadModal = ({ isOpen, onClose, children }) => {
                   >
                     Register
                   </p>
-                </p>
+                </div>
               </div>
             </div>
           ) : (
@@ -371,7 +371,7 @@ export const UploadModal = ({ isOpen, onClose, children }) => {
                   </div>
                 </form>
 
-                <p className="mt-10 text-center text-sm text-gray-500">
+                <div className="mt-10 text-center text-sm text-gray-500">
                   You have an account?{" "}
                   <p
                     onClick={() => setChangeForm(!changeForm)}
@@ -379,7 +379,7 @@ export const UploadModal = ({ isOpen, onClose, children }) => {
                   >
                     Login
                   </p>
-                </p>
+                </div>
               </div>
             </div>
           )}

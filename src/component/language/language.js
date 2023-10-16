@@ -21,59 +21,59 @@ export const Language = () => {
               <div className="spoted-right">
                 <ul>
                   <li>
-                    <a href="javascript:void(0)">Arabic</a>
-                    <a href="javascript:void(0)">Basque</a>
-                    <a href="javascript:void(0)">Bengali</a>
-                    <a href="javascript:void(0)">Bulgarian</a>
-                    <a href="javascript:void(0)">Catalan</a>
-                    <a href="javascript:void(0)">Chinese</a>
-                    <a href="javascript:void(0)">Croatian</a>
-                    <a href="javascript:void(0)">Czech</a>
-                    <a href="javascript:void(0)">Danish</a>
-                    <a href="javascript:void(0)">Dutch 🇱</a>
-                    <a href="javascript:void(0)">English🇸</a>
-                    <a href="javascript:void(0)">Estonian 🇪</a>
-                    <a href="javascript:void(0)">Finnish 🇫</a>
+                    <a href="#">Arabic</a>
+                    <a href="#">Basque</a>
+                    <a href="#">Bengali</a>
+                    <a href="#">Bulgarian</a>
+                    <a href="#">Catalan</a>
+                    <a href="#">Chinese</a>
+                    <a href="#">Croatian</a>
+                    <a href="#">Czech</a>
+                    <a href="#">Danish</a>
+                    <a href="#">Dutch 🇱</a>
+                    <a href="#">English🇸</a>
+                    <a href="#">Estonian 🇪</a>
+                    <a href="#">Finnish 🇫</a>
                   </li>
                   <li>
-                    <a href="javascript:void(0)">French</a>
-                    <a href="javascript:void(0)">Galician</a>
-                    <a href="javascript:void(0)">German</a>
-                    <a href="javascript:void(0)">Gujarati</a>
-                    <a href="javascript:void(0)">Hebrew🇱</a>
-                    <a href="javascript:void(0)">Hindi</a>
-                    <a href="javascript:void(0)">Hungarian</a>
-                    <a href="javascript:void(0)">Icelandic</a>
-                    <a href="javascript:void(0)">Italian</a>
-                    <a href="javascript:void(0)">Japanese</a>
-                    <a href="javascript:void(0)">Kannada</a>
-                    <a href="javascript:void(0)">Korean</a>
-                    <a href="javascript:void(0)">Latvian</a>
+                    <a href="#">French</a>
+                    <a href="#">Galician</a>
+                    <a href="#">German</a>
+                    <a href="#">Gujarati</a>
+                    <a href="#">Hebrew🇱</a>
+                    <a href="#">Hindi</a>
+                    <a href="#">Hungarian</a>
+                    <a href="#">Icelandic</a>
+                    <a href="#">Italian</a>
+                    <a href="#">Japanese</a>
+                    <a href="#">Kannada</a>
+                    <a href="#">Korean</a>
+                    <a href="#">Latvian</a>
                   </li>
                   <li>
-                    <a href="javascript:void(0)">Lithuanian</a>
-                    <a href="javascript:void(0)">Malay 🇳</a>
-                    <a href="javascript:void(0)">Malayalam</a>
-                    <a href="javascript:void(0)">Marathi</a>
-                    <a href="javascript:void(0)">Norwegian</a>
-                    <a href="javascript:void(0)">Polish</a>
-                    <a href="javascript:void(0)">Portuguese</a>
-                    <a href="javascript:void(0)">Punjabi</a>
-                    <a href="javascript:void(0)">Romanian</a>
-                    <a href="javascript:void(0)">Russian🇺</a>
-                    <a href="javascript:void(0)">Serbian🇸</a>
-                    <a href="javascript:void(0)">Slovak🇰</a>
-                    <a href="javascript:void(0)">Slovenian</a>
+                    <a href="#">Lithuanian</a>
+                    <a href="#">Malay 🇳</a>
+                    <a href="#">Malayalam</a>
+                    <a href="#">Marathi</a>
+                    <a href="#">Norwegian</a>
+                    <a href="#">Polish</a>
+                    <a href="#">Portuguese</a>
+                    <a href="#">Punjabi</a>
+                    <a href="#">Romanian</a>
+                    <a href="#">Russian🇺</a>
+                    <a href="#">Serbian🇸</a>
+                    <a href="#">Slovak🇰</a>
+                    <a href="#">Slovenian</a>
                   </li>
                   <li>
-                    <a href="javascript:void(0)">Spanish</a>
-                    <a href="javascript:void(0)">Swedish🇪</a>
-                    <a href="javascript:void(0)">Tamil</a>
-                    <a href="javascript:void(0)">Telugu</a>
-                    <a href="javascript:void(0)">Thai🇭</a>
-                    <a href="javascript:void(0)">Turkish</a>
-                    <a href="javascript:void(0)">Ukrainian</a>
-                    <a href="javascript:void(0)">Vietnamese</a>
+                    <a href="#">Spanish</a>
+                    <a href="#">Swedish🇪</a>
+                    <a href="#">Tamil</a>
+                    <a href="#">Telugu</a>
+                    <a href="#">Thai🇭</a>
+                    <a href="#">Turkish</a>
+                    <a href="#">Ukrainian</a>
+                    <a href="#">Vietnamese</a>
                   </li>
                 </ul>
               </div>

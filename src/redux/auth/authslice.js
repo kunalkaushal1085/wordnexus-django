@@ -14,10 +14,8 @@ export const LoginWithEmail = createAsyncThunk(
   async (data, thunkAPI) => {
     const param = data.form;
     const navigate = data.navigate;
-    console.log("param", param);
     try {
       const res = await axios.post(`${BASE_URL}/customer-login`, param);
-      console.log(res.token, "data");
       if (!(res.status === 200 || res.status === 201)) {
         return thunkAPI.rejectWithValue(res.data.message);
       } else {
@@ -48,14 +46,11 @@ export const registerUser = createAsyncThunk(
 
     try {
       const res = await axios.post(`${BASE_URL}/customer-register`, param);
-      console.log("res", res);
       if (!(res.status === 200 || res.status === 201)) {
         return thunkAPI.rejectWithValue(res.data.message);
       } else {
         toast.success("User Register Successfully");
-        console.log("res?.data?.id", res?.data?.id);
         setUserId(res?.data?.id);
-        navigate("/");
         return res.data.response;
       }
     } catch (error) {
@@ -73,7 +68,6 @@ export const registerUser = createAsyncThunk(
 export const logoutApi = createAsyncThunk(
   "counter/logoutApi",
   async (data, thunkAPI) => {
-    console.log("data", data);
     const navigate = data?.navigate;
     const token = data?.tokenn;
 
@@ -139,12 +133,10 @@ export const getCancelApi = createAsyncThunk(
         null,
         requestOptions
       );
-      console.log();
       if (response.data.error) {
         toast.success(response.data.error);
         return { ...response.data, error: true };
       } else {
-        console.log("response.data", response.data);
         navigate("/");
         toast.success(response.data.message);
         return { ...response.data, error: false };

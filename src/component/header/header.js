@@ -12,7 +12,9 @@ export const Header = () => {
   const tokenn = localStorage.getItem("token");
 
   const handleLogOut = () => {
-    dispatch(logoutApi({ tokenn, navigate }));
+    // dispatch(logoutApi({ tokenn, navigate }));
+    localStorage.clear("");
+    navigate("/");
   };
 
   const openModal = () => setShowModal(true);

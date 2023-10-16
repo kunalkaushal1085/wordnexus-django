@@ -13,22 +13,22 @@ export const Footer = () => {
                   <h5>Pages</h5>
                   <ul className="footer-ul">
                     <li>
-                      <a href="javascript:void(0)">Home</a>
+                      <a href="#">Home</a>
                     </li>
                     <li>
-                      <a href="javascript:void(0)">About</a>
+                      <a href="#">About</a>
                     </li>
                     <li>
-                      <a href="javascript:void(0)">Pricing</a>
+                      <a href="#">Pricing</a>
                     </li>
                     <li>
-                      <a href="javascript:void(0)">Career</a>
+                      <a href="#">Career</a>
                     </li>
                     <li>
-                      <a href="javascript:void(0)">Blog</a>
+                      <a href="#">Blog</a>
                     </li>
                     <li>
-                      <a href="javascript:void(0)">Contact</a>
+                      <a href="#">Contact</a>
                     </li>
                   </ul>
                 </div>
@@ -36,19 +36,19 @@ export const Footer = () => {
                   <h5>Links</h5>
                   <ul className="footer-ul">
                     <li>
-                      <a href="javascript:void(0)">Get a FREE demo</a>
+                      <a href="#">Get a FREE demo</a>
                     </li>
                     <li>
-                      <a href="javascript:void(0)">Features</a>
+                      <a href="#">Features</a>
                     </li>
                     <li>
-                      <a href="javascript:void(0)">Sign in</a>
+                      <a href="#">Sign in</a>
                     </li>
                     <li>
-                      <a href="javascript:void(0)">Get started</a>
+                      <a href="#">Get started</a>
                     </li>
                     <li>
-                      <a href="javascript:void(0)">AI Content Detector</a>
+                      <a href="#">AI Content Detector</a>
                     </li>
                   </ul>
                 </div>
@@ -56,16 +56,16 @@ export const Footer = () => {
                   <h5>Use cases</h5>
                   <ul className="footer-ul">
                     <li>
-                      <a href="javascript:void(0)">AI writing</a>
+                      <a href="#">AI writing</a>
                     </li>
                     <li>
-                      <a href="javascript:void(0)">SEO automation</a>
+                      <a href="#">SEO automation</a>
                     </li>
                     <li>
-                      <a href="javascript:void(0)">Content Marketing AI</a>
+                      <a href="#">Content Marketing AI</a>
                     </li>
                     <li>
-                      <a href="javascript:void(0)">AI in SEO</a>
+                      <a href="#">AI in SEO</a>
                     </li>
                   </ul>
                 </div>

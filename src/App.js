@@ -8,11 +8,16 @@ import { LoginPage } from "./component/login/LoginPage";
 import { RegisterPage } from "./component/register/RegisterPage";
 import { SuccessCard } from "./component/successCard/successCard";
 import { CancelCard } from "./component/cancelCard/CancelCard";
+import Loader from "./component/loader/Loader";
+import { useSelector } from "react-redux";
 
 function App() {
+  const { isLoading } = useSelector((state) => state.slice);
+  console.log("isLoading", isLoading);
   return (
     <>
       <div className="App">
+        {isLoading && <Loader />}
         <BrowserRouter>
           <Routes>
             <Route path="/login" element={<LoginPage />} />
