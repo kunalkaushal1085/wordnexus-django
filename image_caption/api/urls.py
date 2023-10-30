@@ -19,11 +19,16 @@ from django.urls import path
 from api import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path('customer-register', views.UserRegistrationView.as_view()),
     path('customer-login', views.LoginView.as_view()),
     path('create-checkout-session', views.StripeCheckoutSession.as_view(), name='stripe_payment'),
     path('success',views.SuccessPaymentUpdate.as_view(), name='success-api'),
     path('cancle-subscription',views.CanclePaymentUpdate.as_view(), name='success-api'),
+    path('customer-logout', views.LogoutView.as_view()),
+    path('files/upload', views.FileUploadView.as_view()),
+    path('files/', views.FileListView.as_view(), name='file-list'),
+    path('files/<int:file_id>/', views.FileDetailView.as_view(), name='file-detail'),
+    # path('process/', views.FileProcessingView.as_view(), name='file-processing')
+    # path('files/update/', views.FileUpdateView.as_view(), name='file-update'),
 
 ]

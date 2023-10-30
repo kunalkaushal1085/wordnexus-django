@@ -3,10 +3,9 @@ from rest_framework import serializers
 from django.contrib.auth.models import User
 from django.contrib.auth.password_validation import validate_password
 from api.models import CheckoutSession
-from rest_framework_jwt.settings import api_settings
+from .models import File, StatusEnum
 
-jwt_payload_handler = api_settings.JWT_PAYLOAD_HANDLER
-jwt_encode_handler = api_settings.JWT_ENCODE_HANDLER
+
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
@@ -44,4 +43,12 @@ class StripePaymentSerializer(serializers.Serializer):
         model = CheckoutSession
         fields = '__all__'
 
+
+class FileSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = File
+        fields = '__all__'
         
+        
+class FileUpdateSerializer(serializers.Serializer):
+    file_id = serializers.IntegerField()
