@@ -23,7 +23,7 @@ from django.db.models import Q
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 from datetime import date, datetime
-from image_caption.settings import SECRET_Token
+# from image_caption.settings import SECRET_Token
 import requests, base64
 import os
 import shutil
@@ -38,9 +38,13 @@ from rest_framework.parsers import MultiPartParser, FormParser
 import openai
 from rest_framework.pagination import PageNumberPagination
 from api.pagination import file_paginate
+from dotenv import load_dotenv
+load_dotenv() 
 
 
-
+BARD_TOKEN = os.environ["BARD_TOKEN"]
+openai.api_key = os.environ["OPEN-AI-KEY"]
+DOMAIN = os.environ["Domain"]
 monthlyplanId ='prod_Ol1FM2UwmNoT2g'
 yearlyPlanId = 'prod_Ol1H8gKuuDAA07'
 # Create your views here.
@@ -50,7 +54,7 @@ stripe.api_key = 'sk_test_51N9PoyH2aTqcNEkNL9hLemkMQ8KvSlzEHfqgsdVSyGdjZBepzJ8SM
 # from transformers import pipeline
 
 # pipe = pipeline("image-to-text", model="Salesforce/blip-image-captioning-base")
-openai.api_key = "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"
+# openai.api_key = "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"
 
 
 #base url append
@@ -185,8 +189,8 @@ class StripeCheckoutSession(APIView):
             plan_id = "price_1NxVCaH2aTqcNEkNLq88st0B"#monthly
             # plan_id = "price_1NxVETH2aTqcNEkNRrhFCz0W"#yearly
             session = stripe.checkout.Session.create(
-                success_url = f"{LocalhostDomain}/success?bak={bak}",
-                cancel_url = f"{LocalhostDomain}/cancel?bak={bak}",
+                success_url = f"{DOMAIN}/success?bak={bak}",
+                cancel_url = f"{DOMAIN}/cancel?bak={bak}",
                 payment_method_types=["card"],
                 line_items=[
                     {
@@ -384,7 +388,7 @@ class FileProcessingView(APIView):
             file.save()
 
             prompt = "Explain this image"
-            bard = Bard(token=SECRET_Token)
+            bard = Bard(token=BARD_TOKEN)
             image_url = file.file_url
             parsed_url = urlparse(image_url)
             file_name = parsed_url.path.split("/")[-1]
@@ -395,10 +399,11 @@ class FileProcessingView(APIView):
             if bard_answer:
                 generated_text = bard_answer['content']
             else:
-                model_output = pipe(file.file_url)
-                generated_text = str(model_output[0]["generated_text"])
-                sentences = elaborate_text(generated_text)
-                generated_text = sentences["choices"][0]["text"]
+                pass
+                # model_output = pipe(file.file_url)
+                # generated_text = str(model_output[0]["generated_text"])
+                # sentences = elaborate_text(generated_text)
+                # generated_text = sentences["choices"][0]["text"]
             
             # Update file information and change status to 'completed'
             file.detailed_caption = generated_text
